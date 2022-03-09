@@ -10,5 +10,7 @@ public interface Interface {
     void operation();
     void searchPerson();
     void displayBook();
+    void viewByCity();
+    void viewByState();
 
 }

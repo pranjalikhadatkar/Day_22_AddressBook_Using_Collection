@@ -133,4 +133,28 @@ public class Person implements Interface {
             System.out.println(e.getKey() + "--> " + e.getValue());
         }
     }
+
+    public void viewByCity() {
+        System.out.println("Enter city name to search ");
+        String cityName = sc.next();
+        Map<String, Contact> detailsByCity = personByCity.entrySet().stream().filter(e -> e.getKey().equals(cityName)).collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue()));
+        if (detailsByCity != null) {
+            System.out.println(detailsByCity);
+            System.out.println("Number of person belonging to city is: " + detailsByCity.size());
+        } else {
+            System.out.println("Person having particular city is not present");
+        }
+    }
+
+    public void viewByState() {
+        System.out.println("Enter state name to search ");
+        String stateName = sc.next();
+        Map<String, Contact> detailsByState = personByState.entrySet().stream().filter(e -> e.getKey().equals(stateName)).collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue()));
+        if (detailsByState != null) {
+            System.out.println(detailsByState);
+            System.out.println("Number of person belonging to state is: " + detailsByState.size());
+        } else {
+            System.out.println("Person with particular state is not present");
+        }
+    }
 }
