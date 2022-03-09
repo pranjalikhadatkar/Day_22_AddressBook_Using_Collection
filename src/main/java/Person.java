@@ -46,4 +46,16 @@ public class Person implements Interface {
             }
         }
     }
+
+    public void editContact() {
+        System.out.println("Enter name of person whose contact you want to edit");
+        String firstName = sc.next();
+        if (detailsBook.containsKey(firstName)) {
+            infoContact.info();
+            detailsBook.put(firstName, new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email));
+        } else {
+            System.out.println("Contact is not present in book");
+            return;
+        }
+    }
 }

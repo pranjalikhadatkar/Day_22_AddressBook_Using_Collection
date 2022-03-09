@@ -4,5 +4,6 @@ public class AddressBook {
         Interface person = new Person();
         person.createContact();
         person.addContact();
+        person.editContact();
     }
 }
