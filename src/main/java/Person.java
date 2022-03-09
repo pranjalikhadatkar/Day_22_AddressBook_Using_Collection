@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -158,5 +159,29 @@ public class Person implements Interface {
         }
     }
 
+    public void sortAddressBook() {
 
+        Map<String, Contact> sortedContact = detailsBook.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue
+                        , (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+        System.out.println("Sorted Address Book " + sortedContact.toString());
+
+    }
+
+    public void sortByCity() {
+
+        Map<String, Contact> sortedByCity = personByCity.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue
+                        , (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+        System.out.println("Sorted Address Book " + sortedByCity);
+
+    }
+
+    public void sortByState() {
+
+        Map<String, Contact> sortedByState = personByState.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue
+                        , (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+        System.out.println("Sorted Address Book " + sortedByState);
+    }
 }

@@ -12,5 +12,7 @@ public interface Interface {
     void displayBook();
     void viewByCity();
     void viewByState();
-
+    void sortAddressBook();
+    void sortByCity();
+    void sortByState();
 }

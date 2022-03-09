@@ -14,5 +14,8 @@ public class AddressBook {
         person.displayBook();
         person.viewByCity();
         person.viewByState();
+        person.sortAddressBook();
+        person.sortByCity();
+        person.sortByState();
     }
 }
