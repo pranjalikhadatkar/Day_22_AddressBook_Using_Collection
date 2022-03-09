@@ -98,4 +98,24 @@ public class Person implements Interface {
 
     private void addContact (Map<Integer, String[]> map_address_book) {
     }
+
+    public void addToBook() {
+        System.out.println("Enter Name of Address Book");
+        String bookName = sc.next();
+        if (!book.containsKey(bookName)) {
+            book.put(bookName, detailsBook);
+        } else {
+            System.out.println("Book already exists!");
+        }
+    }
+
+    public void operation() {
+        System.out.println("Enter how many address books you want to add");
+        int noOfAddressBook = sc.nextInt();
+        while (noOfAddressBook > 0) {
+            addContact();
+            addToBook();
+            noOfAddressBook--;
+        }
+    }
 }

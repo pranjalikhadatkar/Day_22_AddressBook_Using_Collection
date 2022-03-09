@@ -8,5 +8,7 @@ public class AddressBook {
         person.deleteContact();
         person.displayContact();
         person.addMultiplePerson();
+        person.addToBook();
+        person.operation();
     }
 }

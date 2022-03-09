@@ -6,5 +6,7 @@ public interface Interface {
     void deleteContact();
     void displayContact();
     void addMultiplePerson();
+    void addToBook();
+    void operation();
 
 }
