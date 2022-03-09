@@ -69,4 +69,33 @@ public class Person implements Interface {
             return;
         }
     }
+
+    public void displayContact() {
+        System.out.println("Created contact list is");
+        for (Map.Entry m : detailsBook.entrySet()) {
+            System.out.println(m.getKey() + "--> " + m.getValue());
+        }
+    }
+
+    @Override
+    public void addMultiplePerson () {
+
+    }
+
+    public Map<Integer, String[]> addMultiplePerson(Map<Integer, String[]> map_address_book){
+        System.out.println("Enter the number of persons whose details you want "
+                + "to add to the address book");
+        Scanner sc = new Scanner(System.in);
+        int no_of_person = sc.nextInt();
+        // create address book
+        Map<Integer, String[]> address_book = new HashMap<>();
+        for (int i=1;i<=no_of_person;i++){
+            // call addition method each time
+            addContact(map_address_book);
+        }
+        return map_address_book;
+    }
+
+    private void addContact (Map<Integer, String[]> map_address_book) {
+    }
 }

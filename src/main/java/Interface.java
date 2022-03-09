@@ -4,5 +4,7 @@ public interface Interface {
     void addContact();
     void editContact();
     void deleteContact();
+    void displayContact();
+    void addMultiplePerson();
 
 }

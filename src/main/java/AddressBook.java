@@ -6,5 +6,7 @@ public class AddressBook {
         person.addContact();
         person.editContact();
         person.deleteContact();
+        person.displayContact();
+        person.addMultiplePerson();
     }
 }
