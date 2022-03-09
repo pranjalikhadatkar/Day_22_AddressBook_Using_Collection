@@ -10,5 +10,7 @@ public class AddressBook {
         person.addMultiplePerson();
         person.addToBook();
         person.operation();
+        person.searchPerson();
+        person.displayBook();
     }
 }

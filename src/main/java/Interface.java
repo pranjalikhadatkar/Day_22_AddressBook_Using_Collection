@@ -8,5 +8,7 @@ public interface Interface {
     void addMultiplePerson();
     void addToBook();
     void operation();
+    void searchPerson();
+    void displayBook();
 
 }
